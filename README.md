@@ -38,3 +38,22 @@ This project mimics Spotify’s interface while adding real interactivity — fe
 ---
 
 ## 📂 Project Structure
+SPOTIFY CLONE/
+│
+├── images/             # Playlist and artist images
+├── songs/              # Your .mp3 song files
+│
+├── index.js            # JavaScript logic for player (main)
+│
+├── index2.html         # Main HTML file
+├── styles.css          # Stylesheet
+│
+├── logo.svg            # Spotify logo
+├── home.svg            # Home icon
+├── music.svg           # Music icon
+├── nextsong.svg        # Next song icon
+├── playb.svg           # Play button icon
+├── prevsong.svg        # Previous song icon
+├── search.svg          # Search icon
+│
+└── README.md           # Project documentation
