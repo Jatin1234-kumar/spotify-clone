@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="30" fill="#000000ff"/> <!-- green Spotify circle -->
+  <polygon points="24,16 43,30 24,44" fill="#fff"/> <!-- white play triangle -->
+</svg>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="home-section">
+                <div class="logo">
+                    <img src="logo.svg" alt="Spotify Logo">
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i> Search</li>
+                </ul>
+            </div>
+            <div class="library-section">
+                <div class="header">
+                    <img src="https://www.svgrepo.com/show/465887/playlist-2.svg" alt="Your Library">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songlist">
+                    <ul>
+                        <!-- Song list items will be dynamically generated here by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="nav-buttons">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="auth-buttons">
+                    <button id="signupBtn" class="signup-btn">Sign up</button>
+                    <button id="loginBtn" class="login-btn">Log in</button>
+                </div>
+            </div>
+
+            <div class="playlists-container">
+                <h1>Spotify Playlists</h1>
+                <div class="card-container">
+                    <!-- Cards will be dynamically generated here by JS -->
+                    <div class="card">
+                        <img src="images/chillhits.png" alt="Chill Hits">
+                        <h3>Chill Hits</h3>
+                        <p>Kick back to the best chill tracks.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/moodbooster.png" alt="Mood Booster">
+                        <h3>Mood Booster</h3>
+                        <p>Brighten up your day with upbeat songs.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/workout.png" alt="Workout Mix">
+                        <h3>Workout Mix</h3>
+                        <p>Power through your session with high-energy tracks.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/jazzvibes.png" alt="Jazz Vibes">
+                        <h3>Jazz Vibes</h3>
+                        <p>Relax to smooth and soulful jazz tunes.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/hotandsexy.png" alt="Hot and Sexy">
+                        <h3>Hot & Sexy</h3>
+                        <p>Turn up the heat with steamy, smooth, and irresistible tracks.</p>
+                    </div>
+
+                </div>
+                <h2>Popular Artists</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="images/taylorswift.png" alt="Taylor Swift">
+                        <h3>Taylor Swift</h3>
+                    </div>
+                    <div class="card">
+                        <img src="images/the weekend.png" alt="The Weeknd">
+                        <h3>The Weeknd</h3>
+                    </div>
+                    <div class="card">
+                        <img src="images/es sheeran.png" alt="Ed Sheeran">
+                        <h3>Ed Sheeran</h3>
+                    </div>
+                    <div class="card">
+                        <img src="images/ariana grande.png" alt="Ariana Grande">
+                        <h3>Ariana Grande</h3>
+                    </div>
+                    <div class="card">
+                        <img src="images/drake.png" alt="Drake">
+                        <h3>Drake</h3>
+                    </div>
+                </div>
+                <h2>Suggested for You</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="images/rap cavier.png" alt="RapCaviar">
+                        <h3>RapCaviar</h3>
+                        <p>Featuring Drake, Travis Scott, and more.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/peaceful piano.png" alt="Peaceful Piano">
+                        <h3>Peaceful Piano</h3>
+                        <p>Relax and unwind with gentle piano.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/hot vibes.png" alt="Hot Vibes">
+                        <h3>Hot Vibes</h3>
+                        <p>Sensual beats and smooth rhythms to set the mood.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/summer.png" alt="Summer Vibes">
+                        <h3>Summer Vibes</h3>
+                        <p>Feel the sunshine with these hits.</p>
+                    </div>
+<div class="card">
+        <img src="images/guitar.png" alt="Guitar Hits">
+        <h3>Guitar Hits</h3>
+        <p>Acoustic classics and modern guitar anthems.</p>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="playbar">
+            <div class="song-info">
+                <!-- Song title and artist will be dynamically displayed here -->
+            </div>
+            <div class="player-controls">
+                <input type="range" id="seek-bar" class="seek-bar" value="0">
+                <div class="controls">
+                    <button id="previous"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="masterPlay"><i class="fa-solid fa-play"></i></button>
+                    <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                </div>
+            </div>
+            <div class="volume-control">
+                <input type="range" id="volume-bar" class="volume-bar" min="0" max="100" value="50">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
